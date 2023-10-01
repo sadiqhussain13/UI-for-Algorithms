@@ -1,4 +1,4 @@
-var reverseWordsUpdated = function() {
+var reverseWordsSentence = function() {
     const sentenceInput = document.getElementById('sentence');
     const reversedOutput = document.getElementById('reversedOutputSentence');
   
