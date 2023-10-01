@@ -6,24 +6,27 @@
   <script src="boundary-traversal.js" defer></script>
 </head>
 <body>
-  <div>
-    <label for="rows">Rows: </label>
-    <input type="number" id="rows" min="1">
-  </div>
-  <div>
-    <label for="cols">Columns: </label>
-    <input type="number" id="cols" min="1">
-  </div>
+  <div class="container">
+    <div>
+      <label for="rows">Rows: </label>
+      <input type="number" id="rows" min="1">
+    </div>
+    <div>
+      <label for="cols">Columns: </label>
+      <input type="number" id="cols" min="1">
+    </div>
 
-  <div id="matrixInputs">
-    <!-- Input fields for the matrix elements will be added here -->
-  </div>
+    <div id="matrixInputs">
+      <!-- Input fields for the matrix elements will be added here -->
+    </div>
 
-  <button onclick="performTraversal()">Perform Boundary Traversal</button>
+    <button onclick="performTraversal()">Perform Boundary Traversal</button>
 
-  <div>
-    <label for="result">Boundary Traversal Result: </label>
-    <span id="result"></span>
+    <div>
+      <br>
+      <label for="result">Boundary Traversal Result: </label>
+      <span id="result"></span>
+    </div>
   </div>
 </body>
 </html>
