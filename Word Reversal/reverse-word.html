@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse Words</title>
+  <link rel="stylesheet" type="text/css" href="reverse-word.css">
+</head>
+<body>
+  <div class="container">
+    <div class="entry">
+      <label for="sentence"><h3>ENTER A SENTENCE:</h3></label>
+      <input type="text" id="sentence" />
+    </div>
+<br>
+    <div class="sections-container">
+      <div class="section">
+        <button class="button-word" onclick="reverseWords()">Reverse word</button>
+        <div>
+          <label for="reversedOutput">Reversed words:</label>
+          <span id="reversedOutput"></span>
+        </div>
+      </div>
+
+      <div class="section">
+        <button class="button-sentence" onclick="reverseWordsUpdated()">Reverse sentence</button>
+        <div>
+          <label for="reversedOutputSentence">Reversed sentence:</label>
+          <span id="reversedOutputSentence"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="reverse-word.js"></script>
+  <script src="reverse-sentence.js"></script>
+</body>
+</html>
