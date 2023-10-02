@@ -3,6 +3,44 @@ function calculateDistinctSubsequences() {
     const solution = new Solution();
     const result = solution.distinctSubsequences(inputString);
     document.getElementById('result').innerText = `Distinct subsequences: ${result}`;
+    displaySubsequences(inputString);
+}
+
+function displaySubsequences(inputString) {
+    const subsequences = generateSubsequences(inputString);
+    const subsequencesList = document.getElementById('subsequences');
+    subsequencesList.innerHTML = '';
+    
+    // let validSubsequencesCount = 0;
+
+    subsequences.forEach((subsequence,index) => {
+
+        if (subsequence.length > 0) {
+            const p = document.createElement('p');
+            p.textContent = `${index + 1}. ${subsequence}`;
+            subsequencesList.appendChild(p);
+        }
+    });
+
+    const subsequencesContainer = document.getElementById('subsequencesContainer');
+    subsequencesContainer.style.display = 'block';
+}
+
+function generateSubsequences(inputString) {
+    const subsequences = [];
+    const generate = (str, i, current) => {
+        if (i === str.length) {
+            subsequences.push(current);
+            return;
+        }
+
+        generate(str, i + 1, current + str[i]);
+
+        generate(str, i + 1, current);
+    };
+
+    generate(inputString, 0, '');
+    return subsequences;
 }
 
 class Solution {

@@ -1,19 +1,25 @@
-body {
+body{
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     background: linear-gradient(to right, #FFD700, #0074D9);
+    flex-direction: column;
+    overflow-y: auto;
 }
-
+html{
+    overflow-y: auto;
+}
 .container {
     text-align: center;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2%;
+    margin-top: 5%;
+    
 }
 
 label {
@@ -34,4 +40,27 @@ button {
 
 #result {
     font-weight: bold;
+}
+
+.subsequences-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+#subsequences {
+    /* rows: 10;
+    row-gap: 10px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#subsequences p {
+    margin: 3px 0;
+    display: inline-block;
+    width: calc(20% - 10px);
 }
